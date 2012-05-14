@@ -7,7 +7,8 @@ public class StartupDataTopics {
 
 		Persona, Scenarios, ProblemScore, 
 		UniqueValueProposition, UniqueValueScore, MVPResults, 
-		Vision, Team, Goals, TeamSize, Visits, SignUps, CommunicationSkills, 
+		Vision, Team, Goals, TeamSize,
+		BrandName, Logo, Domain, Blog, Visits, SignUps, CommunicationSkills,
 		SourceCode, TestCoverage, LOC, EarlyAdopters, Returns, 
 		Incorporation, RevenueModel, Partnerships, CostPerUser, RevenuePerUser, MustHaveScore,
 		AdvisorsBoard, InvestorsMeetings, InvestmentScore,

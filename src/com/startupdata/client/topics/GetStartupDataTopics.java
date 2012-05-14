@@ -4,7 +4,8 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.startupdata.client.StartupDataGlobalVariables;
+import com.startupdata.client.StartupData;
+import com.startupdata.client.topics.topicpanels.StartupDataTextTopic;
 
 public class GetStartupDataTopics {
 
@@ -27,10 +28,10 @@ public class GetStartupDataTopics {
 							JSONObject obj = (JSONObject) JSONParser
 									.parseStrict(jsonResult);
 
-							StartupDataGlobalVariables.companyTopics = obj;
+							StartupData.companyTopics = obj;
 
-							StartupDataGlobalVariables.vpStartupTopic.clear();
-							StartupDataGlobalVariables.vpStartupTopic
+							StartupData.vpStartupTopic.clear();
+							StartupData.vpStartupTopic
 									.add(new StartupDataTextTopic(topicName));
 						}
 

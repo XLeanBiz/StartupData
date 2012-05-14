@@ -6,7 +6,7 @@ import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.TextArea;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.startupdata.client.StartupDataGlobalVariables;
+import com.startupdata.client.StartupData;
 import com.startupdata.client.utilities.ConvertJson;
 
 public class EditStartupDataTextTopic extends VerticalPanel {
@@ -28,18 +28,20 @@ public class EditStartupDataTextTopic extends VerticalPanel {
 			@Override
 			public void onClick(ClickEvent event) {
 
-				SaveStartupDataTopic.save(StartupDataGlobalVariables.companyID,
-						topicName, topicField.getValue());
+				String companyID = ConvertJson
+						.convertToString(StartupData.company.get("ID"));
+
+				SaveStartupDataTopic.save(companyID, topicName,
+						topicField.getValue());
 			}
 		});
 
 		this.add(save);
 
-		if (StartupDataGlobalVariables.companyTopics != null) {
+		if (StartupData.companyTopics != null) {
 
 			String companyTopicDescription = ConvertJson
-					.convertToString(StartupDataGlobalVariables.companyTopics
-							.get(topicName));
+					.convertToString(StartupData.companyTopics.get(topicName));
 
 			topicField.setValue(companyTopicDescription);
 		}
