@@ -17,7 +17,7 @@ public class GWTEntryPoint implements EntryPoint {
 
 		StartupData.company = companyTest();
 
-		RootPanel.get().add(StartupData.vpStartupTopic);
+		RootPanel.get().add(MyCompanyPanel.vpStartupTopic);
 	}
 
 	private JSONObject companyTest() {
@@ -25,7 +25,6 @@ public class GWTEntryPoint implements EntryPoint {
 		String companyString = "{\"image\":\"http://a7.sphotos.ak.fbcdn.net/hphotos-ak-ash4/422474_331005503607897_330997440275370_884079_1698126433_n.jpg\","
 				+ " \"entityName\":\"eXtreme Lean Business\", \"email\":\"alline.oliveira@xlean.biz\", "
 				+ "\"blogURL\":\"http://xleanbiz.wordpress.com\", "
-				+ "\"Founded\":[\"UniqueID(\"AllineWatkins_1332886062783\")\"], "
 				+ "\"aboutmeURL\":\"http://xlean.biz\", "
 				+ "\"ID\":\"EXtremeLeanBusiness_1332812176007\", "
 				+ "\"facebookLogin\":\"330997440275370\", "

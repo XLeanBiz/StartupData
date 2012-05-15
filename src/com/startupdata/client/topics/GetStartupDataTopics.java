@@ -4,12 +4,12 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
+import com.startupdata.client.MyCompanyPanel;
 import com.startupdata.client.StartupData;
-import com.startupdata.client.topics.topicpanels.StartupDataTextTopic;
 
 public class GetStartupDataTopics {
 
-	public static void get(final String startupID, final String topicName) {
+	public static void get(final String startupID, final String topicID) {
 
 		final StartupDataServiceAsync startupDataService = GWT
 				.create(StartupDataService.class);
@@ -30,9 +30,9 @@ public class GetStartupDataTopics {
 
 							StartupData.companyTopics = obj;
 
-							StartupData.vpStartupTopic.clear();
-							StartupData.vpStartupTopic
-									.add(new StartupDataTextTopic(topicName));
+							MyCompanyPanel.vpStartupTopic.clear();
+							MyCompanyPanel.vpStartupTopic.add(VerifyTopic
+									.showTextTopic(topicID));
 						}
 
 					}

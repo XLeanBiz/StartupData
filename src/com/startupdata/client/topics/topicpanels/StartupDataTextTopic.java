@@ -7,21 +7,15 @@ import com.startupdata.client.utilities.ConvertJson;
 
 public class StartupDataTextTopic extends VerticalPanel {
 
-	public StartupDataTextTopic(final String topicName) {
+	public StartupDataTextTopic(final String topicID) {
 
-		this.setSpacing(20);
+		this.setSpacing(10);
 
 		String companyTopicDescription = ConvertJson
-				.convertToString(StartupData.companyTopics.get(topicName));
+				.convertToString(StartupData.companyTopics.get(topicID));
 
-		if (companyTopicDescription != null) {
+		HTML htmlDescription = new HTML(companyTopicDescription);
+		this.add(htmlDescription);
 
-			HTML htmlDescription = new HTML(companyTopicDescription);
-			add(htmlDescription);
-
-		} else {
-
-			StartupData.editTopic(topicName);
-		}
 	}
 }
