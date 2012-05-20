@@ -1,7 +1,7 @@
-package com.startupdata.server;
+package com.startupdata.server.startupdb;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.startupdata.client.topics.StartupDataService;
+import com.startupdata.client.startupdb.StartupDataService;
 
 /**
  * The server side implementation of the RPC service.

@@ -6,11 +6,11 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import com.startupdata.client.topics.StartupDataTopics;
 import com.startupdata.client.topics.VerifyTopic;
-import com.startupdata.client.topics.edit.EditTextIcon;
 
 public class MyCompanyPanel extends VerticalPanel {
+
+	public static VerticalPanel vpEditTopic = new VerticalPanel();
 
 	public static VerticalPanel vpStartupTopic = new VerticalPanel();
 
@@ -31,7 +31,7 @@ public class MyCompanyPanel extends VerticalPanel {
 			hp.add(htmlMyCompany);
 
 			hp.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_RIGHT);
-			hp.add(new EditTextIcon(topicId));
+			hp.add(vpEditTopic);
 
 			this.add(hp);
 

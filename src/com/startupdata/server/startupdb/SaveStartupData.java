@@ -1,4 +1,4 @@
-package com.startupdata.server;
+package com.startupdata.server.startupdb;
 
 import com.startupdata.server.utilities.EncryptText;
 import com.startupdata.server.utilities.URLUtilities;
@@ -15,7 +15,7 @@ public class SaveStartupData {
 	public static void save(final String startupID, final String topicName,
 			final String topicDescription) {
 
-		String parameters = "kind=StartupData&ID="
+		String parameters = "kind=StartupDataTopics&ID="
 				+ URLUtilities.encode(startupID);
 
 		parameters += "&fieldsKind=Text&fieldsName="

@@ -1,4 +1,4 @@
-package com.startupdata.server;
+package com.startupdata.server.startupdb;
 
 import com.startupdata.server.utilities.EncryptText;
 import com.startupdata.server.utilities.URLUtilities;
@@ -13,7 +13,7 @@ public class GetStartupData {
 
 	public static String getJsonString(final String startupID) {
 
-		String parameters = "kind=StartupData&ID="
+		String parameters = "kind=StartupDataTopics&ID="
 				+ URLUtilities.encode(startupID);
 
 		final String jsonTopicString = URLUtilities.fetchURLPost(getUrl,

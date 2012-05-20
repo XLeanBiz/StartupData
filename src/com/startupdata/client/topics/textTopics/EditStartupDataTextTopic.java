@@ -1,10 +1,10 @@
-package com.startupdata.client.topics.edit;
+package com.startupdata.client.topics.textTopics;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Button;
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
-import com.google.gwt.user.client.ui.TextArea;
+import com.google.gwt.user.client.ui.RichTextArea;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupdata.client.StartupData;
 import com.startupdata.client.utilities.ConvertJson;
@@ -17,9 +17,8 @@ public class EditStartupDataTextTopic extends VerticalPanel {
 		this.setWidth("100%");
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
 
-		final TextArea topicField = new TextArea();
-		topicField.setWidth("500px");
-
+		final RichTextArea topicField = new RichTextArea();
+		topicField.setSize("500px", "60px");
 		add(topicField);
 
 		Button save = new Button("Save");
@@ -32,7 +31,7 @@ public class EditStartupDataTextTopic extends VerticalPanel {
 						.convertToString(StartupData.company.get("ID"));
 
 				SaveStartupDataTopic.save(companyID, topicName,
-						topicField.getValue());
+						topicField.getHTML());
 			}
 		});
 
@@ -43,7 +42,7 @@ public class EditStartupDataTextTopic extends VerticalPanel {
 			String companyTopicDescription = ConvertJson
 					.convertToString(StartupData.companyTopics.get(topicName));
 
-			topicField.setValue(companyTopicDescription);
+			topicField.setHTML(companyTopicDescription);
 		}
 
 	}

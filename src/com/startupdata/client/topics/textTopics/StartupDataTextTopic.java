@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.topicpanels;
+package com.startupdata.client.topics.textTopics;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;

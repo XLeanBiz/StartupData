@@ -8,6 +8,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,6 +25,21 @@ public class URLUtilities {
 			return URLEncoder.encode(text, "UTF-8");
 		} catch (final UnsupportedEncodingException e) {
 			throw new IllegalStateException(e);
+		}
+	}
+
+	public static String decode(final String text) {
+
+		if (text != null) {
+
+			try {
+				return URLDecoder.decode(text, "UTF-8");
+			} catch (final UnsupportedEncodingException e) {
+				throw new IllegalStateException(e);
+			}
+		} else {
+
+			return null;
 		}
 	}
 

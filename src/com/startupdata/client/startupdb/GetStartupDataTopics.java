@@ -1,11 +1,11 @@
-package com.startupdata.client.topics;
+package com.startupdata.client.startupdb;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
-import com.startupdata.client.MyCompanyPanel;
 import com.startupdata.client.StartupData;
+import com.startupdata.client.topics.VerifyTopic;
 
 public class GetStartupDataTopics {
 
@@ -30,9 +30,10 @@ public class GetStartupDataTopics {
 
 							StartupData.companyTopics = obj;
 
-							MyCompanyPanel.vpStartupTopic.clear();
-							MyCompanyPanel.vpStartupTopic.add(VerifyTopic
-									.showTextTopic(topicID));
+							if (topicID != null) {
+
+								new VerifyTopic(topicID);
+							}
 						}
 
 					}

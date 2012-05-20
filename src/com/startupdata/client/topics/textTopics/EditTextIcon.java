@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.edit;
+package com.startupdata.client.topics.textTopics;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

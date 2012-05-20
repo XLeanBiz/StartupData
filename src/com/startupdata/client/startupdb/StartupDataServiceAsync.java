@@ -1,4 +1,4 @@
-package com.startupdata.client.topics;
+package com.startupdata.client.startupdb;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 

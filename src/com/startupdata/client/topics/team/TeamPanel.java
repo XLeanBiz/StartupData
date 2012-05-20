@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.topicpanels;
+package com.startupdata.client.topics.team;
 
 import com.google.gwt.json.client.JSONArray;
 import com.google.gwt.json.client.JSONObject;
@@ -9,9 +9,9 @@ import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupdata.client.StartupData;
 import com.startupdata.client.utilities.ConvertJson;
 
-public class Team extends VerticalPanel {
+public class TeamPanel extends VerticalPanel {
 
-	public Team(final JSONObject company) {
+	public TeamPanel() {
 
 		this.setSpacing(10);
 
