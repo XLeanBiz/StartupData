@@ -28,7 +28,7 @@ public class GWTEntryPoint implements EntryPoint {
 				+ "\"aboutmeURL\":\"http://xlean.biz\", "
 				+ "\"ID\":\"EXtremeLeanBusiness_1332812176007\", "
 				+ "\"facebookLogin\":\"330997440275370\", "
-				+ "\"FoundedEntities\":[{\"ID\":\"AllineWatkins_1332886062783\", "
+				+ "\"FoundedInfo\":[{\"ID\":\"AllineWatkins_1332886062783\", "
 				+ "\"image\":\"http://media.linkedin.com/mpr/pub/image-ioivm44h01ZaaEhYVyvKGB_zBA9zwCh71GpHI3PNBsCdwUGaioiHI_AhB7Kbw8VDn06c/alline-watkins.jpg\", "
 				+ "\"entityName\":\"Alline Watkins\"}], "
 				+ "\"githubLogin\":\"\"}";

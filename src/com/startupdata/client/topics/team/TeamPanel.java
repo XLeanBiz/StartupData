@@ -16,39 +16,43 @@ public class TeamPanel extends VerticalPanel {
 		this.setSpacing(10);
 
 		JSONArray jsonArray = (JSONArray) StartupData.company
-				.get("FoundedEntities");
+				.get("FoundedInfo");
 
-		for (int i = 0; i < jsonArray.size(); i++) {
+		if (jsonArray != null) {
 
-			final JSONObject contactJson = (JSONObject) jsonArray.get(i);
+			for (int i = 0; i < jsonArray.size(); i++) {
 
-			String entityName = ConvertJson.getStringValue(contactJson,
-					"entityName");
+				final JSONObject contactJson = (JSONObject) jsonArray.get(i);
 
-			String imageURL = ConvertJson.getStringValue(contactJson, "image");
+				String entityName = ConvertJson.getStringValue(contactJson,
+						"entityName");
 
-			String id = ConvertJson.getStringValue(contactJson, "ID");
+				String imageURL = ConvertJson.getStringValue(contactJson,
+						"image");
 
-			HorizontalPanel hpName = new HorizontalPanel();
+				String id = ConvertJson.getStringValue(contactJson, "ID");
 
-			hpName.setSpacing(5);
-			hpName.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
+				HorizontalPanel hpName = new HorizontalPanel();
 
-			if (imageURL != null) {
+				hpName.setSpacing(5);
+				hpName.setVerticalAlignment(HasVerticalAlignment.ALIGN_MIDDLE);
 
-				HTML image = new HTML("<a href='http://uniqueid.co?ID=" + id
-						+ "' target='_blank'><img src='" + imageURL
-						+ "' border=0 width='25px' height='25px'></a>");
-				hpName.add(image);
+				if (imageURL != null) {
+
+					HTML image = new HTML("<a href='http://uniqueid.co?ID="
+							+ id + "' target='_blank'><img src='" + imageURL
+							+ "' border=0 width='25px' height='25px'></a>");
+					hpName.add(image);
+				}
+
+				HTML name = new HTML(
+						"<font size=2 color=blue><a href='http://uniqueid.co?ID="
+								+ id + "' target='_blank'>" + entityName
+								+ "</a></font>");
+				hpName.add(name);
+
+				this.add(hpName);
 			}
-
-			HTML name = new HTML(
-					"<font size=2 color=blue><a href='http://uniqueid.co?ID="
-							+ id + "' target='_blank'>" + entityName
-							+ "</a></font>");
-			hpName.add(name);
-
-			this.add(hpName);
 		}
 	}
 }

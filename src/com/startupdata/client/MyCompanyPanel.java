@@ -48,7 +48,7 @@ public class MyCompanyPanel extends VerticalPanel {
 			String values = Arrays.deepToString(StartupDataTopics.TopicID
 					.values());
 
-			values.replaceAll("]", ",");
+			values = values.replaceAll("]", ",");
 
 			if (values.contains(topicId + ",")) {
 

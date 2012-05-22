@@ -19,28 +19,37 @@ public class SolutionPanel extends VerticalPanel {
 							.get(StartupDataTopics.TopicID.UniqueValueProposition
 									.toString()));
 
-			HTML htmlDescription = new HTML(
-					"<font color=blue><b>Unique Value Proposition:</b></font><br><blockquote>"
-							+ uniqueValueProposition + "</blockquote>");
-			this.add(htmlDescription);
+			if (uniqueValueProposition != null) {
+
+				HTML htmlDescription = new HTML(
+						"<font color=blue><b>Unique Value Proposition:</b></font><br><blockquote>"
+								+ uniqueValueProposition + "</blockquote>");
+				this.add(htmlDescription);
+			}
 
 			String vision = ConvertJson
 					.convertToString(StartupData.companyTopics
 							.get(StartupDataTopics.TopicID.Vision.toString()));
 
-			HTML htmlVision = new HTML(
-					"<font color=blue><b>Vision:</b></font><br><blockquote>"
-							+ vision + "</blockquote>");
-			this.add(htmlVision);
+			if (vision != null) {
+
+				HTML htmlVision = new HTML(
+						"<font color=blue><b>Vision:</b></font><br><blockquote>"
+								+ vision + "</blockquote>");
+				this.add(htmlVision);
+			}
 
 			String goals = ConvertJson
 					.convertToString(StartupData.companyTopics
 							.get(StartupDataTopics.TopicID.Goals.toString()));
 
-			HTML htmlGoals = new HTML(
-					"<font color=blue><b>Goals:</b></font><br><blockquote>"
-							+ goals + "</blockquote>");
-			this.add(htmlGoals);
+			if (goals != null) {
+
+				HTML htmlGoals = new HTML(
+						"<font color=blue><b>Goals:</b></font><br><blockquote>"
+								+ goals + "</blockquote>");
+				this.add(htmlGoals);
+			}
 		}
 	}
 }
