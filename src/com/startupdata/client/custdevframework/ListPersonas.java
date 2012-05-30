@@ -1,4 +1,4 @@
-package com.startupdata.client.interviewsdb;
+package com.startupdata.client.custdevframework;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONArray;
@@ -11,8 +11,8 @@ public class ListPersonas {
 
 	public static void list() {
 
-		final InterviewsDatabaseServiceAsync dataService = GWT
-				.create(InterviewsDatabaseService.class);
+		final CustDevFrameworkServiceAsync dataService = GWT
+				.create(CustDevFrameworkService.class);
 
 		dataService.listPersonas(new AsyncCallback<String>() {
 
@@ -24,7 +24,6 @@ public class ListPersonas {
 
 				JSONArray jsonArray = (JSONArray) JSONParser
 						.parseStrict(jsonResult);
-
 
 				MyCompanyPanel.vpStartupTopic.clear();
 				MyCompanyPanel.vpStartupTopic.add(new EditPersona(jsonArray));

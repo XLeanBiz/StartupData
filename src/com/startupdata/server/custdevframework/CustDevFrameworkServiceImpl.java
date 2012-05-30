@@ -1,14 +1,14 @@
-package com.startupdata.server.interviewsdb;
+package com.startupdata.server.custdevframework;
 
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
-import com.startupdata.client.interviewsdb.InterviewsDatabaseService;
+import com.startupdata.client.custdevframework.CustDevFrameworkService;
 
 /**
  * The server side implementation of the RPC service.
  */
 @SuppressWarnings("serial")
-public class InterviewsDatabaseServiceImpl extends RemoteServiceServlet
-		implements InterviewsDatabaseService {
+public class CustDevFrameworkServiceImpl extends RemoteServiceServlet
+		implements CustDevFrameworkService {
 
 	public String listPersonas() {
 

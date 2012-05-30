@@ -1,11 +1,11 @@
-package com.startupdata.client.interviewsdb;
+package com.startupdata.client.custdevframework;
 
 import com.google.gwt.user.client.rpc.AsyncCallback;
 
 /**
  * The async counterpart of <code>GreetingService</code>.
  */
-public interface InterviewsDatabaseServiceAsync {
+public interface CustDevFrameworkServiceAsync {
 
 	void listPersonas(AsyncCallback<String> callback);
 

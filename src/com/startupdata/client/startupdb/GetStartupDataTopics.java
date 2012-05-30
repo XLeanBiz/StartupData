@@ -6,8 +6,17 @@ import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.startupdata.client.StartupData;
 import com.startupdata.client.topics.VerifyTopic;
+import com.startupdata.client.utilities.ConvertJson;
 
 public class GetStartupDataTopics {
+
+	public static void get(final JSONObject companyJson, final String topicID) {
+
+		String companyID = ConvertJson.convertToString(StartupData.company
+				.get("ID"));
+
+		get(companyID, topicID);
+	}
 
 	public static void get(final String startupID, final String topicID) {
 

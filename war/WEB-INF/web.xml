@@ -16,12 +16,12 @@
 	</servlet-mapping>
 
 	<servlet>
-		<servlet-name>interviewsDataServlet</servlet-name>
-		<servlet-class>com.startupdata.server.interviewsdb.InterviewsDatabaseServiceImpl</servlet-class>
+		<servlet-name>CustDevFrameworkServlet</servlet-name>
+		<servlet-class>com.startupdata.server.custdevframework.CustDevFrameworkServiceImpl</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>interviewsDataServlet</servlet-name>
-		<url-pattern>/startupdata/interviewsData</url-pattern>
+		<servlet-name>CustDevFrameworkServlet</servlet-name>
+		<url-pattern>/startupdata/custdevframework</url-pattern>
 	</servlet-mapping>
 
 	<!-- Default page to serve -->

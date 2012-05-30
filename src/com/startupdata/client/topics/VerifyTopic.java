@@ -45,8 +45,7 @@ public class VerifyTopic {
 
 		case Brand:
 			MyCompanyPanel.vpEditTopic.add(new EditCompanyIcon());
-			MyCompanyPanel.vpStartupTopic.add(new BrandPanel(
-					StartupData.company));
+			MyCompanyPanel.vpStartupTopic.add(new BrandPanel());
 			break;
 
 		default:

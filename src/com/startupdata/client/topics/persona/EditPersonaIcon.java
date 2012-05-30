@@ -4,7 +4,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.user.client.ui.Anchor;
-import com.startupdata.client.interviewsdb.ListPersonas;
+import com.startupdata.client.custdevframework.ListPersonas;
 import com.startupdata.client.utilities.UseTracking;
 
 public class EditPersonaIcon extends Anchor {

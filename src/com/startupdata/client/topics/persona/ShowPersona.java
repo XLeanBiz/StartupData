@@ -4,30 +4,37 @@ import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
 import com.startupdata.client.MyCompanyPanel;
 import com.startupdata.client.StartupData;
-import com.startupdata.client.interviewsdb.ListPersonas;
+import com.startupdata.client.StartupDataTopics;
+import com.startupdata.client.custdevframework.ListPersonas;
 import com.startupdata.client.utilities.ConvertJson;
 
 public class ShowPersona {
 
 	public ShowPersona() {
 
-		String persona = ConvertJson.convertToString(StartupData.company
-				.get("Persona"));
+		if (StartupData.companyTopics != null) {
 
-		if (persona != null) {
+			String persona = ConvertJson
+					.convertToString(StartupData.companyTopics
+							.get(StartupDataTopics.TopicID.Persona.toString()));
 
-			VerticalPanel vp = new VerticalPanel();
+			if (persona != null) {
 
-			vp.setSpacing(20);
+				VerticalPanel vp = new VerticalPanel();
 
-			HTML htmlDescription = new HTML("<b>" + persona + "</b>");
-			vp.add(htmlDescription);
+				vp.setSpacing(20);
 
-			MyCompanyPanel.vpStartupTopic.add(vp);
+				HTML htmlDescription = new HTML(
+						"<a href='http://startupsdata.appspot.com?persona="
+								+ persona + "'><b>" + persona + "</b></a>");
+				vp.add(htmlDescription);
 
-		} else {
+				MyCompanyPanel.vpStartupTopic.add(vp);
 
-			ListPersonas.list();
+			} else {
+
+				ListPersonas.list();
+			}
 		}
 	}
 }

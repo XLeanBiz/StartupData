@@ -16,6 +16,8 @@ public class GWTEntryPoint implements EntryPoint {
 	public void onModuleLoad() {
 
 		StartupData.company = companyTest();
+		
+		StartupData.companyTopics = null;
 
 		RootPanel.get().add(MyCompanyPanel.vpStartupTopic);
 	}

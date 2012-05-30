@@ -1,6 +1,5 @@
 package com.startupdata.client.topics.brand;
 
-import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.HorizontalPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -9,7 +8,7 @@ import com.startupdata.client.utilities.ConvertJson;
 
 public class BrandPanel extends VerticalPanel {
 
-	public BrandPanel(final JSONObject company) {
+	public BrandPanel() {
 
 		HorizontalPanel hp = new HorizontalPanel();
 		hp.setSpacing(20);

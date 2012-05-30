@@ -2,7 +2,6 @@ package com.startupdata.client;
 
 import com.google.gwt.json.client.JSONObject;
 import com.startupdata.client.startupdb.GetStartupDataTopics;
-import com.startupdata.client.utilities.ConvertJson;
 
 public class StartupData {
 
@@ -15,9 +14,6 @@ public class StartupData {
 		company = companyReference;
 		companyTopics = null;
 
-		String companyID = ConvertJson.convertToString(StartupData.company
-				.get("ID"));
-
-		GetStartupDataTopics.get(companyID, null);
+		GetStartupDataTopics.get(companyReference, null);
 	}
 }

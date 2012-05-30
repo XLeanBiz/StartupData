@@ -1,4 +1,4 @@
-package com.startupdata.client.interviewsdb;
+package com.startupdata.client.custdevframework;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
@@ -7,7 +7,7 @@ import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
  * The client side stub for the RPC service.
  */
 @RemoteServiceRelativePath("interviewsData")
-public interface InterviewsDatabaseService extends RemoteService {
+public interface CustDevFrameworkService extends RemoteService {
 
 	String listPersonas();
 
