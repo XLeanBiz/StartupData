@@ -6,10 +6,14 @@ import com.startupdata.client.StartupData;
 import com.startupdata.client.StartupDataTopics;
 import com.startupdata.client.topics.brand.BrandPanel;
 import com.startupdata.client.topics.brand.EditCompanyIcon;
+import com.startupdata.client.topics.idea.EditIdeaIcon;
+import com.startupdata.client.topics.idea.IdeaPanel;
 import com.startupdata.client.topics.persona.EditPersonaIcon;
 import com.startupdata.client.topics.persona.ShowPersona;
+import com.startupdata.client.topics.problem.EditProblemIcon;
+import com.startupdata.client.topics.problem.ShowProblem;
 import com.startupdata.client.topics.solution.EditSolutionIcon;
-import com.startupdata.client.topics.solution.SolutionPanel;
+import com.startupdata.client.topics.solution.ShowSolution;
 import com.startupdata.client.topics.team.TeamPanel;
 import com.startupdata.client.topics.textTopics.EditStartupDataTextTopic;
 import com.startupdata.client.topics.textTopics.EditTextIcon;
@@ -28,19 +32,29 @@ public class VerifyTopic {
 
 		switch (topicEnum) {
 
-		case Persona:
-			MyCompanyPanel.vpEditTopic.add(new EditPersonaIcon());
-			new ShowPersona();
-			break;
-
-		case Solution:
-			MyCompanyPanel.vpEditTopic.add(new EditSolutionIcon());
-			MyCompanyPanel.vpStartupTopic.add(new SolutionPanel());
+		case Idea:
+			MyCompanyPanel.vpEditTopic.add(new EditIdeaIcon());
+			MyCompanyPanel.vpStartupTopic.add(new IdeaPanel());
 			break;
 
 		case Team:
 			MyCompanyPanel.vpEditTopic.add(new EditCompanyIcon());
 			MyCompanyPanel.vpStartupTopic.add(new TeamPanel());
+			break;
+
+		case Persona:
+			MyCompanyPanel.vpEditTopic.add(new EditPersonaIcon());
+			new ShowPersona();
+			break;
+
+		case Problem:
+			MyCompanyPanel.vpEditTopic.add(new EditProblemIcon());
+			new ShowProblem();
+			break;
+
+		case Solution:
+			MyCompanyPanel.vpEditTopic.add(new EditSolutionIcon());
+			new ShowSolution();
 			break;
 
 		case Brand:

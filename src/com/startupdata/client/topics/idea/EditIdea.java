@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.solution;
+package com.startupdata.client.topics.idea;
 
 import com.google.gwt.user.client.ui.HasHorizontalAlignment;
 import com.google.gwt.user.client.ui.RichTextArea;
@@ -7,25 +7,20 @@ import com.startupdata.client.StartupData;
 import com.startupdata.client.utilities.ConvertJson;
 import com.startupdata.client.utilities.FormField;
 
-public class EditSolution extends VerticalPanel {
+public class EditIdea extends VerticalPanel {
 
-	public static RichTextArea uniqueValuePropositionField = new RichTextArea();
+	// public static RichTextArea uniqueValuePropositionField = new
+	// RichTextArea();
 
 	public static RichTextArea visionField = new RichTextArea();
 
 	public static RichTextArea goalsField = new RichTextArea();
 
-	public EditSolution() {
+	public EditIdea() {
 
 		this.setSpacing(10);
 		this.setWidth("100%");
 		this.setHorizontalAlignment(HasHorizontalAlignment.ALIGN_CENTER);
-
-		uniqueValuePropositionField.setHTML("");
-		uniqueValuePropositionField.setSize("500px", "60px");
-		this.add(FormField.getFormField(
-				"<font color=blue><b>Unique Value Proposition</b></font>",
-				uniqueValuePropositionField));
 
 		visionField.setHTML("");
 		visionField.setSize("500px", "60px");
@@ -39,24 +34,15 @@ public class EditSolution extends VerticalPanel {
 
 		if (StartupData.companyTopics != null) {
 
-			String uniqueValueProposition = ConvertJson
-					.convertToString(StartupData.companyTopics
-							.get("UniqueValueProposition"));
-
-			uniqueValuePropositionField.setHTML(uniqueValueProposition);
-
 			String vision = ConvertJson
 					.convertToString(StartupData.companyTopics.get("Vision"));
-
 			visionField.setHTML(vision);
 
 			String goals = ConvertJson
 					.convertToString(StartupData.companyTopics.get("Goals"));
-
 			goalsField.setHTML(goals);
 		}
 
-		this.add(new ButtonSaveSolution());
-
+		this.add(new ButtonSaveIdea());
 	}
 }

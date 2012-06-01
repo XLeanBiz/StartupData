@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.persona;
+package com.startupdata.client.topics.idea;
 
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
@@ -9,9 +9,9 @@ import com.startupdata.client.startupdb.GetStartupDataTopics;
 import com.startupdata.client.topics.textTopics.SaveStartupDataTopic;
 import com.startupdata.client.utilities.ConvertJson;
 
-public class ButtonSavePersona extends Button {
+public class ButtonSaveIdea extends Button {
 
-	public ButtonSavePersona() {
+	public ButtonSaveIdea() {
 
 		this.setHTML("Save");
 		this.addClickHandler(new ClickHandler() {
@@ -22,13 +22,17 @@ public class ButtonSavePersona extends Button {
 				String companyID = ConvertJson
 						.convertToString(StartupData.company.get("ID"));
 
-				SaveStartupDataTopic.save(companyID, "Persona",
-						EditPersona.personaList
-								.getValue(EditPersona.personaList
-										.getSelectedIndex()));
+			//	SaveStartupDataTopic.save(companyID, "UniqueValueProposition",
+			//			EditIdea.uniqueValuePropositionField.getHTML());
+
+				SaveStartupDataTopic.save(companyID, "Vision",
+						EditIdea.visionField.getHTML());
+
+				SaveStartupDataTopic.save(companyID, "Goals",
+						EditIdea.goalsField.getHTML());
 
 				GetStartupDataTopics.get(companyID,
-						StartupDataTopics.TopicID.Persona.toString());
+						StartupDataTopics.TopicID.Solution.toString());
 			}
 		});
 	}

@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.persona;
+package com.startupdata.client.topics.problem;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -7,17 +7,17 @@ import com.startupdata.client.StartupData;
 import com.startupdata.client.StartupDataTopics;
 import com.startupdata.client.utilities.ConvertJson;
 
-public class ShowPersona {
+public class ShowProblem {
 
-	public ShowPersona() {
+	public ShowProblem() {
 
 		if (StartupData.companyTopics != null) {
 
-			String persona = ConvertJson
+			String problem = ConvertJson
 					.convertToString(StartupData.companyTopics
-							.get(StartupDataTopics.TopicID.Persona.toString()));
+							.get(StartupDataTopics.TopicID.Problem.toString()));
 
-			if (persona != null) {
+			if (problem != null) {
 
 				VerticalPanel vp = new VerticalPanel();
 
@@ -28,8 +28,8 @@ public class ShowPersona {
 
 				HTML htmlDescription = new HTML(
 						"<a href='http://startupsdata.appspot.com?company="
-								+ companyID + "&persona=" + persona
-								+ "' target='_blank'><b>" + persona
+								+ companyID + "&problem=" + problem
+								+ "' target='_blank'><b>" + problem
 								+ "</b></a>");
 				vp.add(htmlDescription);
 

@@ -15,15 +15,6 @@
 		<url-pattern>/startupdata/startupData</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
-		<servlet-name>CustDevFrameworkServlet</servlet-name>
-		<servlet-class>com.startupdata.server.custdevframework.CustDevFrameworkServiceImpl</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>CustDevFrameworkServlet</servlet-name>
-		<url-pattern>/startupdata/custdevframework</url-pattern>
-	</servlet-mapping>
-
 	<!-- Default page to serve -->
 	<welcome-file-list>
 		<welcome-file>StartupData.html</welcome-file>

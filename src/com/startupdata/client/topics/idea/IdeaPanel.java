@@ -1,4 +1,4 @@
-package com.startupdata.client.topics.solution;
+package com.startupdata.client.topics.idea;
 
 import com.google.gwt.user.client.ui.HTML;
 import com.google.gwt.user.client.ui.VerticalPanel;
@@ -6,26 +6,13 @@ import com.startupdata.client.StartupData;
 import com.startupdata.client.StartupDataTopics;
 import com.startupdata.client.utilities.ConvertJson;
 
-public class SolutionPanel extends VerticalPanel {
+public class IdeaPanel extends VerticalPanel {
 
-	public SolutionPanel() {
+	public IdeaPanel() {
 
 		this.setSpacing(20);
 
 		if (StartupData.companyTopics != null) {
-
-			String uniqueValueProposition = ConvertJson
-					.convertToString(StartupData.companyTopics
-							.get(StartupDataTopics.TopicID.UniqueValueProposition
-									.toString()));
-
-			if (uniqueValueProposition != null) {
-
-				HTML htmlDescription = new HTML(
-						"<font color=blue><b>Unique Value Proposition:</b></font><br><blockquote>"
-								+ uniqueValueProposition + "</blockquote>");
-				this.add(htmlDescription);
-			}
 
 			String vision = ConvertJson
 					.convertToString(StartupData.companyTopics

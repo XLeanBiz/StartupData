@@ -5,8 +5,8 @@ public class StartupDataTopics {
 
 	public enum TopicID {
 
-		Persona,
-		Solution, UniqueValueProposition, Vision, Goals, 
+		Idea, UniqueValueProposition, Vision, Goals, 
+		Persona, Problem, Solution, 
 		Team, Brand
 	}
 
